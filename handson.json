@@ -1,0 +1,56 @@
+{
+  "awskrug.2018.handson.today": {
+    "paths": {
+      "": "https://github.com/awskrug/handson-labs-2018",
+      "serverless/datalake": "https://github.com/awskrug/handson-labs-2018/tree/master/Serverless/3_serverless_datalake"
+    },
+    "type": "redirect",
+    "register": {
+      "emails": [
+        "wesky93@gmail.com"
+      ]
+    },
+    "meta": {
+      "category": [
+        "datalake",
+        "serverless",
+        "aws"
+      ],
+      "tag": [
+        "aws",
+        "serverless",
+        "awskrug"
+      ]
+    }
+  },
+  "awskrug.2018.serverless.datalake.handson.today": {
+    "paths": {
+      "": "https://github.com/awskrug/handson-labs-2018/tree/master/Serverless/3_serverless_datalake"
+    },
+    "type": "redirect",
+    "register": {
+      "emails": [
+        "wesky93@gmail.com"
+      ]
+    },
+    "meta": {
+      "category": [
+        "datalake",
+        "serverless",
+        "aws"
+      ],
+      "tag": [
+        "aws",
+        "serverless",
+        "awskrug"
+      ]
+    }
+  },
+  "*": {
+    "target": "handson.today",
+    "type": "redirect",
+    "register": {
+      "email": "wesky93@gmail.com"
+    }
+  }
+}

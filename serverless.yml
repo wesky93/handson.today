@@ -1,0 +1,37 @@
+service: handsontoday
+
+provider:
+  name: aws
+  profile: everypython
+  region: ap-northeast-2
+  runtime: python3.8
+  memorySize: 128
+
+
+
+package:
+  include:
+    - handson.json
+    - app.py
+  exclude:
+    - node_modules/**
+    - .venv/**
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+custom:
+  wsgi:
+    app: app.app
+    pythonBin: python3
+    packRequirements: false
+
+functions:
+  api:
+    handler: wsgi_handler.handler
+    timeout: 30
+#    events:
+#      - alb:
+#          listenerArn : arn:aws:elasticloadbalancing:ap-northeast-2:213888382832:listener/app/handson-today/9feb52dda3fe8fef/659e8a1504c8a301
+#          priority: 1
+#          conditions:
+#            path: /
